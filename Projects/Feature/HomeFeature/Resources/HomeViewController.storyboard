@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GitHub Stars-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="HomeFeature" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1B-2E-Zn8" customClass="CustomTopTabView" customModule="DesignSystem">
+                                <rect key="frame" x="0.0" y="92" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="zSc-7P-t6s"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9I2-he-i2g">
+                                <rect key="frame" x="0.0" y="158" width="414" height="738"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="400" placeholderIntrinsicHeight="738" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ClI-w8-6NZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="738"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ClI-w8-6NZ" firstAttribute="top" secondItem="iP8-cY-bwV" secondAttribute="top" id="GDC-eW-ZLJ"/>
+                                    <constraint firstItem="ClI-w8-6NZ" firstAttribute="bottom" secondItem="iP8-cY-bwV" secondAttribute="bottom" id="Qx2-wj-0ez"/>
+                                    <constraint firstItem="ClI-w8-6NZ" firstAttribute="leading" secondItem="iP8-cY-bwV" secondAttribute="leading" id="iJU-Oz-cSE"/>
+                                    <constraint firstItem="ClI-w8-6NZ" firstAttribute="trailing" secondItem="iP8-cY-bwV" secondAttribute="trailing" id="lq5-Zq-Sse"/>
+                                    <constraint firstItem="ClI-w8-6NZ" firstAttribute="height" secondItem="yCI-Ag-1dE" secondAttribute="height" id="o6f-Xc-u1Y"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="iP8-cY-bwV"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="yCI-Ag-1dE"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G1B-2E-Zn8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0ad-NH-ybQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="G1B-2E-Zn8" secondAttribute="trailing" id="7gQ-qV-UNX"/>
+                            <constraint firstItem="9I2-he-i2g" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Dv5-S6-4QD"/>
+                            <constraint firstItem="9I2-he-i2g" firstAttribute="top" secondItem="G1B-2E-Zn8" secondAttribute="bottom" constant="16" id="I6Z-aV-ZGP"/>
+                            <constraint firstItem="G1B-2E-Zn8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Wsj-Vo-7Dw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9I2-he-i2g" secondAttribute="trailing" id="iXB-pp-Xlj"/>
+                            <constraint firstAttribute="bottom" secondItem="9I2-he-i2g" secondAttribute="bottom" id="n38-Av-4Qj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="GitHub Stars" largeTitleDisplayMode="always" id="aGY-vW-0ts"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="pageStackView" destination="ClI-w8-6NZ" id="mSr-Oc-THv"/>
+                        <outlet property="scrollView" destination="9I2-he-i2g" id="aoc-8y-JAd"/>
+                        <outlet property="topTabView" destination="G1B-2E-Zn8" id="Q6I-l1-6j5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-516" y="-25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

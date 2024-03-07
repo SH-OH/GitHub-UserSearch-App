@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="127" id="VoR-Rj-ed7" customClass="UserSearchItemCell" customModule="UserSearchFeature">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VoR-Rj-ed7" id="ySo-h6-vVJ">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZ5-hv-rUz" customClass="UserItemView" customModule="DesignSystem">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="FZ5-hv-rUz" secondAttribute="bottom" id="2mm-R5-NZN"/>
+                    <constraint firstItem="FZ5-hv-rUz" firstAttribute="leading" secondItem="ySo-h6-vVJ" secondAttribute="leading" id="BA5-cP-9dZ"/>
+                    <constraint firstAttribute="trailing" secondItem="FZ5-hv-rUz" secondAttribute="trailing" id="Uej-5N-bwe"/>
+                    <constraint firstItem="FZ5-hv-rUz" firstAttribute="top" secondItem="ySo-h6-vVJ" secondAttribute="top" id="k4j-7n-LsY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="itemView" destination="FZ5-hv-rUz" id="dZk-id-AE2"/>
+            </connections>
+            <point key="canvasLocation" x="-19.083969465648853" y="-148.2394366197183"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

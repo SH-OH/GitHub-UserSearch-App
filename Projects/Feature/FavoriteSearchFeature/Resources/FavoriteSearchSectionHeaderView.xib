@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FavoriteSearchSectionHeaderView" customModule="FavoriteSearchFeature">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="30"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68a-W4-vjM">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="30"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vad-hr-IWH">
+                            <rect key="frame" x="16" y="0.0" width="31.666666666666671" height="30"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Vad-hr-IWH" secondAttribute="bottom" id="GNv-ve-oyC"/>
+                        <constraint firstItem="Vad-hr-IWH" firstAttribute="top" secondItem="68a-W4-vjM" secondAttribute="top" id="efW-22-gxf"/>
+                        <constraint firstItem="Vad-hr-IWH" firstAttribute="leading" secondItem="68a-W4-vjM" secondAttribute="leading" constant="16" id="sSm-nO-8pW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="68a-W4-vjM" secondAttribute="trailing" id="HRs-d1-YZC"/>
+                <constraint firstAttribute="bottom" secondItem="68a-W4-vjM" secondAttribute="bottom" id="IUk-bd-Syl"/>
+                <constraint firstItem="68a-W4-vjM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gij-zC-nZv"/>
+                <constraint firstItem="68a-W4-vjM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="i7o-X8-mrC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLabel" destination="Vad-hr-IWH" id="0q3-ZI-rTy"/>
+            </connections>
+            <point key="canvasLocation" x="26.717557251908396" y="-209.1549295774648"/>
+        </view>
+    </objects>
+</document>

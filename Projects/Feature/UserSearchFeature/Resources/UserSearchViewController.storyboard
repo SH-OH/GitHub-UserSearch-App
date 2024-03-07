@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--User Search View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="UserSearchViewController" id="Y6W-OH-hqX" customClass="UserSearchViewController" customModule="UserSearchFeature" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="grL-gd-7m2">
+                                <rect key="frame" x="0.0" y="98" width="414" height="798"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" systemColor="systemGrayColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="do7-5Y-vsW">
+                                <rect key="frame" x="0.0" y="48" width="414" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="검색어를 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dlr-4I-tFa" customClass="DefaultTextField" customModule="DesignSystem">
+                                        <rect key="frame" x="16" y="0.0" width="382" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="dlr-4I-tFa" firstAttribute="top" secondItem="do7-5Y-vsW" secondAttribute="top" id="0s6-uy-Slu"/>
+                                    <constraint firstAttribute="height" constant="50" id="BzR-SE-MZI"/>
+                                    <constraint firstAttribute="bottom" secondItem="dlr-4I-tFa" secondAttribute="bottom" id="TFd-eT-LTL"/>
+                                    <constraint firstAttribute="trailing" secondItem="dlr-4I-tFa" secondAttribute="trailing" constant="16" id="fXw-oF-g78"/>
+                                    <constraint firstItem="dlr-4I-tFa" firstAttribute="leading" secondItem="do7-5Y-vsW" secondAttribute="leading" constant="16" id="g53-n1-WMS"/>
+                                </constraints>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="kG0-hl-ctw">
+                                <rect key="frame" x="197" y="445" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="grL-gd-7m2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="2pb-Bj-H9k"/>
+                            <constraint firstItem="kG0-hl-ctw" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="71c-fF-l3Q"/>
+                            <constraint firstItem="do7-5Y-vsW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Crq-rH-NaO"/>
+                            <constraint firstItem="kG0-hl-ctw" firstAttribute="centerY" secondItem="vDu-zF-Fre" secondAttribute="centerY" id="HXL-cK-g15"/>
+                            <constraint firstItem="do7-5Y-vsW" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Id7-k4-VBp"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="do7-5Y-vsW" secondAttribute="trailing" id="KnU-rb-V2S"/>
+                            <constraint firstItem="grL-gd-7m2" firstAttribute="top" secondItem="do7-5Y-vsW" secondAttribute="bottom" id="bJF-dc-RwS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="grL-gd-7m2" secondAttribute="trailing" id="fD9-Yo-RRs"/>
+                            <constraint firstAttribute="bottom" secondItem="grL-gd-7m2" secondAttribute="bottom" id="u4Z-nv-Goi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="kG0-hl-ctw" id="XDO-Pv-ckq"/>
+                        <outlet property="searchTextField" destination="dlr-4I-tFa" id="JLr-Uv-Bdc"/>
+                        <outlet property="tableView" destination="grL-gd-7m2" id="gMz-t2-ENg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-516" y="-25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
