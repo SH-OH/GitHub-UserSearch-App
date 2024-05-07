@@ -21,13 +21,6 @@ curl -Ls https://install.tuist.io | bash
 make generate
 ```
 
-
-`remember-pre-project.xcworkspace` 열기 및 **remember-pre-project** scheme에서 실행.
-
-```
-open remember-pre-project.xcworkspace
-```
-
 ## Project Overview
 
 ### Technologies Used
