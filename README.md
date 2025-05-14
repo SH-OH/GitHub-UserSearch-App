@@ -93,6 +93,6 @@ Feature - Domain - Core - UserInterface - Shared 의 5개 Layer로 분리했습�
 
 #### Dependencies Graph
 
-<img src="https://github.com/SH-OH/Github-SearchUser/assets/50817510/af8459ad-297d-49b1-8f7f-0d53c7ad25df" width="600">
+<img src="https://github.com/user-attachments/assets/c91420cf-d084-48ce-9a8d-acfd74a56208" width="600">
 
 `graph.png` 이미지 입니다.
